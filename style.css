@@ -1,0 +1,17 @@
+/*Load custom fonts*/
+@font-face {
+    font-family: 'FuturisTitle';
+    src: url('./fonts/silkscreen-latin-400-normal.ttf'); /*location of project font*/
+}
+
+h1{
+    font-family: 'FuturisTitle', serif;
+}
+
+body {
+    background-color: rgb(240, 240, 240);
+}
+
+button {
+
+}
