@@ -4,6 +4,11 @@
     src: url('./fonts/silkscreen-latin-400-normal.ttf'); /*location of project font*/
 }
 
+@font-face {
+    font-family: 'SansSymbols';
+    src: url('./fonts/noto-sans-symbols-2-latin-400-normal.ttf');
+}
+
 h1{
     font-family: 'FuturisTitle', serif;
 }
@@ -11,6 +16,16 @@ h1{
 body {
     background-color: rgb(240, 240, 240);
 }
+
+#time{ /*time element (# for id element) (fixed moves element relevant to viewport window*/
+    position: fixed;
+    bottom : 10px;
+    right : 20px;
+
+    font-family: 'SansSymbols', serif;
+    font-size: 30px;
+}
+
 
 button {
 
