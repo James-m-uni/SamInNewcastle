@@ -3,42 +3,79 @@ let hour = 0;
 let minute = 0;
 let second = 0;
 
-let setting = 0;
+
+const settings = {
+    secondsEnabled : true,
+    musicEnabled : true,
+    soundEffectsEnabled : true,
+    timeLocationDetermination : 0
+}
 
 let ssdTimeFont = [0x1FBF0, 0x1FBF1, 0x1FBF2, 0x1FBF3, 0x1FBF4, 0x1FBF5, 0x1FBF6, 0x1FBF7, 0x1FBF8, 0x1FBF9]; /*hexadecimal font codes for the seven segment display*/
 
+function displayTime() {
+    let longTime = [];
 
-function getTime(setting) { //0 = time in newcastle, 1 = local user time
+    /*deal with hour not having double digits first*/
+    if (hour < 10) {
+        longTime.push(0);
+        longTime.push(Number(hour));
+    } else {
+        let dominantHour = String(hour).charAt(0);
+        longTime.push(dominantHour);
+        longTime.push(Number(hour) % (dominantHour * 10));
+    }
+
+    /*handle minutes possibly not containing double digits*/
+    if (minute < 10) {
+        longTime.push(0);
+        longTime.push(Number(minute));
+    } else {
+        let dominantMinute = String(minute).charAt(0);
+        longTime.push(dominantMinute);
+        longTime.push(Number(minute) % (dominantMinute * 10));
+    }
+
+
+    if (settings.secondsEnabled) {
+        if (second < 10) {
+            longTime.push(0);
+            longTime.push(Number(second));
+        } else {
+            let dominantSecond = String(second).charAt(0);
+            longTime.push(dominantSecond);
+            longTime.push(Number(second) % (dominantSecond * 10));
+        }
+
+    }
+
+    let completedString = "";
+    for (let i= 0; i < longTime.length; i++) {
+        if (i % 2 === 0 && i !== longTime.length - 1 && i !== 0) {
+            completedString += ":";
+        }
+        completedString += String.fromCodePoint(ssdTimeFont[longTime[i]]); /*only supports one font at this time maybe add more later?*/
+    }
+
+    document.getElementById("time").textContent = completedString;
+}
+
+function changeTime() {
     const date = new Date();
-
-    if (setting === 0) {//if newcastle time (mabye add check for british summer time)?
+    if (settings.timeLocationDetermination === 0) {/*if time is just meant to be local newcastle time*/
         hour = date.getUTCHours();
         minute = date.getUTCMinutes();
-    } else if (setting === 1) {//if local user time
+        second = date.getUTCSeconds();
+    } else if (settings.timeLocationDetermination === 1) { //if local user time
         hour = date.getHours();
         minute = date.getMinutes();
-        console.log("Getting local user time of", hour, ":", minute);
+        second = date.getSeconds();
     }
+
+    displayTime();
 }
 
-function formatter(number) {
-    if (number < 10) {
-        return "0" + number;
-    }
-    return number;
+while (true) {
+    setInterval(changeTime(settings), 1000);
 }
 
-function changeTime(setting) {
-    const timeTitle = document.getElementById("time");
-
-    getTime(setting);
-
-    /*Format time to correct number of digits*/
-
-    //add check for if setting time is enabled
-    if (true) {
-        timeTitle.textContent = formatter(hour) + ":" + formatter(minute);
-    }
-}
-
-changeTime(setting);

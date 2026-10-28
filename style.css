@@ -6,7 +6,7 @@
 
 @font-face {
     font-family: 'SansSymbols';
-    src: url('./fonts/noto-sans-symbols-2-latin-400-normal.ttf');
+    src: url('./fonts/noto-sans-symbols-2-symbols-400-normal.ttf') format('truetype');
 }
 
 h1{
