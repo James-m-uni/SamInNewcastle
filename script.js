@@ -75,7 +75,7 @@ function changeTime() {
     displayTime();
 }
 
-while (true) {
-    setInterval(changeTime(settings), 1000);
-}
+
+changeTime(settings);
+
 
