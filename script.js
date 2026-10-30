@@ -76,6 +76,10 @@ function changeTime() {
 }
 
 
+
+
 changeTime(settings);
+
+setInterval(changeTime, 1000);
 
 
