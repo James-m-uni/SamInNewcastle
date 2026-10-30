@@ -9,12 +9,11 @@
     src: url('./fonts/noto-sans-symbols-2-symbols-400-normal.ttf') format('truetype');
 }
 
-h1{
-    font-family: 'FuturisTitle', serif;
-}
-
 body {
     background-color: rgb(240, 240, 240);
+    background-image: url("./placeholder.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #time{ /*time element (# for id element) (fixed moves element relevant to viewport window*/
@@ -27,8 +26,37 @@ body {
     color: red;
 }
 
+.titleBackground {
+    width: 500px;
+    height: 50px;
+    display: flex;
+
+    /*clip-path: polygon(var(--p) 0,100% 0,calc(100% - var(--p)) 100%,0 100%);*/
+    clip-path: polygon(0 0, 100% 0, calc(100% - 30%) 100%, 0 100%);
+    background: rgb(95 95 95 / 0.53);
+
+    box-shadow:
+            inset 60px 0 120px #485c71,  /* left magenta */
+            inset -60px 0 120px #7882ba, /* right cyan */
+
+                /* in order: x offset, y offset, blur size, spread size, color */
+            5px 5px 40px 50px #0ff;
 
 
-button {
+}
 
+.titleBackground div{
+    font-family: 'FuturisTitle', serif;
+    font-size: 35px;
+    padding: 0 10px;
+}
+
+#preferencesButton {
+    position: absolute;
+    height: 20px;
+    aspect-ratio: 1;
+    background: linear-gradient(rgb(95 95 95 / 0.53) 50%,#0000 0) top/100% 40% repeat-y;
+    bottom: 10px;
+    left: 10px;
+    border-style: none;
 }
