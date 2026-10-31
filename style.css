@@ -26,22 +26,24 @@ body {
     color: red;
 }
 
+.titleWrapper {
+    width: 500px;
+    height: 50px;
+    filter: drop-shadow(0 0 15px rgb(175 28 195 / 0.7));
+}
+
 .titleBackground {
     width: 500px;
     height: 50px;
     display: flex;
 
+    overflow: visible;
+
     /*clip-path: polygon(var(--p) 0,100% 0,calc(100% - var(--p)) 100%,0 100%);*/
     clip-path: polygon(0 0, 100% 0, calc(100% - 30%) 100%, 0 100%);
     background: rgb(95 95 95 / 0.53);
 
-    box-shadow:
-            inset 60px 0 120px #485c71,  /* left magenta */
-            inset -60px 0 120px #7882ba, /* right cyan */
-
-                /* in order: x offset, y offset, blur size, spread size, color */
-            5px 5px 40px 50px #0ff;
-
+    /*filter: drop-shadow(0 0 8px rgba(0,150,255,0.7));*/
 
 }
 
