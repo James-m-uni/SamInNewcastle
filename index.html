@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/header.css">
 
 <head>
     <meta charset="UTF-8">
@@ -10,13 +11,22 @@
 
 
 <body>
-
-<div class="titleWrapper">
-    <div class="titleBackground">
-        <div>Sam's Corner</div>
+<div class="titleContainer">
+    <div class="titleTopRowContainer">
+        <div class="titleBackgroundTopPolygon"></div>
+        <div class="titleBackgroundTopPolygonFade"></div>
     </div>
-</div>
 
+    <div class="titleBackgroundBottomRowContainer">
+        <div class="titleBackgroundBottomMainPolygon"></div>
+
+        <div class="titleBackgroundBottomFlairPolygonBackground">
+            <div class="titleBackgroundBottomFlairPolygon"></div>
+        </div>
+    </div>
+
+
+</div>
 
 
 <div id="time"></div>
@@ -24,8 +34,8 @@
 <button id="preferencesButton" type="button"></button>
 
 
-<script src="script.js"></script>
-<script src="clock.js"></script> <!runs clock script when page has finished loading>
+<script src="js/script.js"></script>
+<script src="js/clock.js"></script> <!runs clock script when page has finished loading>
 
 </body>
 </html>

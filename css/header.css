@@ -1,0 +1,80 @@
+.titleContainer {
+    display: flex;
+
+    flex-direction: column;
+}
+
+.titleTopRowContainer {
+    display: flex;
+}
+
+
+.titleBackgroundTopPolygon {
+    left: 0;
+    top: 0;
+
+    z-index: 1;
+
+    width: 350px;
+    height: 50px;
+    /*display: flex;*/
+
+    overflow: visible;
+
+    background: rgb(50 54 103 / 1);
+
+    /*filter: drop-shadow(0 0 8px rgba(0,150,255,0.7));*/
+}
+
+.titleBackgroundTopPolygonFade{
+    width: 150px;
+    height: 50px;
+
+    z-index: 1;
+
+    /*change middle perentage to affect angled line angle*/
+    clip-path: polygon(0 0, 100% 0, calc(100% - 25%) 100%, 0 100%);
+    background: rgb(50 54 103 / 1);
+}
+
+
+.titleBackgroundBottomRowContainer {
+    display: flex;
+
+}
+
+.titleBackgroundBottomMainPolygon {
+    width: 300px;
+    height: 30px;
+    /*display: flex;*/
+
+    overflow: visible;
+
+    background: rgb(50 54 103 / 1); /*opacity on end*/
+}
+
+.titleBackgroundBottomFlairPolygonBackground {
+    width: 75px;
+    height: 30px;
+
+    overflow: visible;
+    background: rgb(50 54 103 / 1);
+    clip-path: polygon(0 0, 100% 0, calc(100% - 24%) 100%, 0 100%);
+}
+
+.titleBackgroundBottomFlairPolygon {
+    width: 81px;
+    height: 30px;
+
+    overflow: visible;
+
+    /*background: linear-gradient(to top, rgb(155,90,251), rgb(106,86,244));*/
+        background: repeating-linear-gradient(300deg, rgb(155,90,251), rgb(106,86,244) 10px, transparent 10px, transparent 20px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    clip-path: polygon(9% 0, 100% 0, calc(100% - 24%) 100%, 0 100%);
+}
+

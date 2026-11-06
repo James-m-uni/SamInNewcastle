@@ -11,7 +11,7 @@
 
 body {
     background-color: rgb(240, 240, 240);
-    background-image: url("./placeholder.jpeg");
+    background-image: url("css/placeholder.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -26,6 +26,7 @@ body {
     color: red;
 }
 
+/*
 .titleWrapper {
     width: 500px;
     height: 50px;
@@ -40,18 +41,9 @@ body {
     overflow: visible;
 
     /*clip-path: polygon(var(--p) 0,100% 0,calc(100% - var(--p)) 100%,0 100%);*/
-    clip-path: polygon(0 0, 100% 0, calc(100% - 30%) 100%, 0 100%);
-    background: rgb(95 95 95 / 0.53);
+
 
     /*filter: drop-shadow(0 0 8px rgba(0,150,255,0.7));*/
-
-}
-
-.titleBackground div{
-    font-family: 'FuturisTitle', serif;
-    font-size: 35px;
-    padding: 0 10px;
-}
 
 #preferencesButton {
     position: absolute;
