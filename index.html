@@ -2,6 +2,7 @@
 <html lang="en">
 <link rel="stylesheet" href="css/main.css">
 <link rel="stylesheet" href="css/header.css">
+<link rel="stylesheet" href="css/background.css">
 
 <head>
     <meta charset="UTF-8">
@@ -12,7 +13,9 @@
 
 <body>
 <div class="titleContainer">
+    <h1 id="mainTitle"></h1>
     <div class="titleTopRowContainer">
+        <div class="titleTopRowAccent"></div>
         <div class="titleBackgroundTopPolygon"></div>
         <div class="titleBackgroundTopPolygonFade"></div>
     </div>
@@ -31,11 +34,13 @@
 
 <div id="time"></div>
 
-<button id="preferencesButton" type="button"></button>
+<div class="bottomFlairContainer">
+    <div class="bottomFlairMainAccent"></div>
+    <div class="bottomFlairMainPolygon"></div>
+</div>
 
 
-<script src="js/script.js"></script>
-<script src="js/clock.js"></script> <!runs clock script when page has finished loading>
+<script src="js/title.js"></script>
 
 </body>
 </html>
