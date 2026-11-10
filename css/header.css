@@ -37,7 +37,7 @@
 
     z-index: 2;
 
-    background: rgb(182 115 230 / 1);
+    background: rgb(183 107 232);
 }
 
 .titleBackgroundTopPolygon {
@@ -52,7 +52,7 @@
 
     overflow: visible;
 
-    background: rgb(50 54 103 / 1);
+    background: rgb(27 19 51);
 
     /*filter: drop-shadow(0 0 8px rgba(0,150,255,0.7));*/
 }
@@ -65,7 +65,7 @@
 
     /*change middle perentage to affect angled line angle*/
     clip-path: polygon(0 0, 100% 0, calc(100% - 25%) 100%, 0 100%);
-    background: rgb(50 54 103 / 1);
+    background: rgb(27 19 51);
 }
 
 
@@ -81,7 +81,7 @@
 
     overflow: visible;
 
-    background: rgb(50 54 103 / 1); /*opacity on end*/
+    background: rgb(27 19 51); /*opacity on end*/
 }
 
 .titleBackgroundBottomFlairPolygonBackground {
@@ -89,7 +89,7 @@
     height: 30px;
 
     overflow: visible;
-    background: rgb(50 54 103 / 1);
+    background: rgb(27 19 51);
     clip-path: polygon(0 0, 100% 0, calc(100% - 24%) 100%, 0 100%);
 }
 
@@ -100,7 +100,7 @@
     overflow: visible;
 
     /*background: linear-gradient(to top, rgb(155,90,251), rgb(106,86,244));*/
-        background: repeating-linear-gradient(300deg, rgb(155,90,251), rgb(106,86,244) 10px, transparent 10px, transparent 20px);
+        background: repeating-linear-gradient(300deg, rgb(183 107 232), rgb(107 18 237) 10px, transparent 10px, transparent 20px);
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         position: relative;
         display: flex;
