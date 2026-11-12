@@ -35,7 +35,7 @@
 .bottomFlairSecondaryPolygon {
     position: absolute;
 
-    z-index: 1;
+    z-index: 0;
 
     right: 0;
 
@@ -46,7 +46,7 @@
     bottom: 0;
 
 
-    background: rgb(51 19 19);
+    background: rgb(27 19 51 / 0.8);
 }
 
 

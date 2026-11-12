@@ -1,0 +1,67 @@
+@font-face {
+    font-family: 'Oxanium';
+    src: url('/fonts/oxanium-latin-800-normal.ttf'); /*location of title font*/
+}
+
+.modal {
+    /*display: none;  Hidden by default RETURN TO NONE WHEN FINISHED */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(24, 21, 46);
+    padding: 15px;
+    border: 2px solid rgb(161, 129, 230);
+    border-radius: 25px;
+    width: 50%; /* Could be more or less, depending on screen size */
+}
+
+.modalHeaderFlair {
+    width: 80%;
+    height: 30px;
+
+    overflow: visible;
+
+    /*background: linear-gradient(to top, rgb(155,90,251), rgb(106,86,244));*/
+    background: repeating-linear-gradient(300deg, rgb(183 107 232), rgb(107 18 237) 10px, transparent 10px, transparent 20px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    clip-path: polygon(2% 0, 100% 0, calc(100% - 3%) 100%, 0 100%);
+}
+
+h2 {
+    font-family: 'Oxanium', serif;
+    color: rgb(216 216 216);
+    font-size: 25px;
+    margin-block: 1vh;
+}
+
+h1{
+    font-family: 'Oxanium', serif;
+    color: rgb(216 216 216);
+    margin-block: 0;
+}
+
+p {
+    font-family: 'Oxanium', serif;
+    color: rgb(216 216 216);
+}
+
