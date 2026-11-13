@@ -1,67 +1,30 @@
-@font-face {
-    font-family: 'Oxanium';
-    src: url('/fonts/oxanium-latin-800-normal.ttf'); /*location of title font*/
-}
-
-.modal {
-    /*display: none;  Hidden by default RETURN TO NONE WHEN FINISHED */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-    align-items: center;
+.mainModal {
+    position: fixed;
+    inset: 0;
+    display: flex;
     justify-content: center;
-    display: flex;
-    flex-direction: column;
-}
-
-.modal-content {
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    background-color: rgb(24, 21, 46);
-    padding: 15px;
-    border: 2px solid rgb(161, 129, 230);
-    border-radius: 25px;
-    width: 50%; /* Could be more or less, depending on screen size */
+    z-index: 1000;
 }
 
-.modalHeaderFlair {
-    width: 80%;
-    height: 30px;
-
-    overflow: visible;
-
-    /*background: linear-gradient(to top, rgb(155,90,251), rgb(106,86,244));*/
-    background: repeating-linear-gradient(300deg, rgb(183 107 232), rgb(107 18 237) 10px, transparent 10px, transparent 20px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+.modalContent {
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    clip-path: polygon(2% 0, 100% 0, calc(100% - 3%) 100%, 0 100%);
-}
+    width: 90%;
+    max-width: 650px;
+    min-height: 350px;
 
-h2 {
-    font-family: 'Oxanium', serif;
-    color: rgb(216 216 216);
-    font-size: 25px;
-    margin-block: 1vh;
-}
+    box-sizing: border-box;
+    padding: 40px;
+    overflow: hidden;
+    border-radius: 18px;
 
-h1{
-    font-family: 'Oxanium', serif;
-    color: rgb(216 216 216);
-    margin-block: 0;
-}
+    background-color: #080817;
+    border: 1px solid rgba(182, 115, 230, 0.7);
+    box-shadow: 0 0 15px rgba(182, 115, 230, 0.35);
 
-p {
-    font-family: 'Oxanium', serif;
-    color: rgb(216 216 216);
+    color: white; /*text colour unless overwritten*/
+    background-image: linear-gradient(110deg, rgba(8, 8, 23, 1), rgba(8, 8, 23, 0.85), rgba(8, 8, 23, 0.1)), url('../img/modal/samSkyline1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
-

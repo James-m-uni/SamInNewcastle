@@ -1,6 +1,6 @@
 body {/*used for placeholder image*/
     background-color: rgb(240, 240, 240);
-    background-image: url("placeholder.jpeg");
+    background-image: url("../img/placeholder.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
 
