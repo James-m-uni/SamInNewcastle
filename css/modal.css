@@ -1,3 +1,13 @@
+@font-face {
+    font-family: 'RussoOne';
+    src: url('/fonts/RussoOne-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('/fonts/jetbrains-mono-latin-400-italic.ttf');
+}
+
 .mainModal {
     position: fixed;
     inset: 0;
@@ -11,7 +21,7 @@
     position: relative;
     width: 90%;
     max-width: 650px;
-    min-height: 350px;
+    min-height: 300px;
 
     box-sizing: border-box;
     padding: 40px;
@@ -27,4 +37,83 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+.modalBody {
+    position: relative;
+    z-index: 1;
+    width: 70%;
+}
+
+.modalWelcomeToTitle {
+    font-family: 'jetbrains mono', serif;
+    color: #a879ff;
+    font-size: 24px;
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+
+.modalWelcomeToTitle::before {
+    content: "";
+    display: inline-block;
+    width: 80px;
+    height: 18px;
+
+    /*adjust to affect where the stripes start so they dont look cut off*/
+    background: repeating-linear-gradient(
+            300deg,
+            rgb(183 107 232),
+            rgb(107 18 237) 10px,
+            transparent 10px,
+            transparent 20px
+    );
+
+    clip-path: polygon(9% 0, 100% 0, calc(100% - 24%) 100%, 0 100%);
+}
+
+.modalSamCornerTitle {
+    font-family: 'RussoOne', sans-serif;
+    font-size: 40px;
+    color: #f0edff;
+    margin-top: 5px;
+    margin-bottom: 12px;
+}
+
+.modalMainContextText {
+    font-family: 'jetbrains mono', serif;
+    width: 90%;
+    font-size: 15px;
+}
+
+.modalButtonContainer {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.modalPrimaryButton {/*Relax with Sam*/
+    padding: 8px 24px;
+    background: #791be8;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-family: 'jetbrains mono', serif;
+
+    /*transition anim*/
+    transition: background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.modalPrimaryButton:hover {
+    background: #922fff;
+    cursor: pointer;
+    box-shadow: 0 0 12px rgba(146, 47, 255, 0.6);
+}
+
+.modalSecondaryButton {
+    padding: 8px 24px;
+    background: transparent;
+    border: 1px solid rgba(183, 107, 242, 0.5);
+    color: #c9b6e8;
+    font-family: 'jetbrains mono', serif;
+    border-radius: 6px;
 }

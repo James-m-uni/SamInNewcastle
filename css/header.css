@@ -1,5 +1,5 @@
 @font-face {
-    font-family: 'Oxanium';
+    font-family: 'RussoOne';
     src: url('/fonts/RussoOne-Regular.ttf'); /*location of title font*/
 }
 
@@ -16,7 +16,7 @@
 #mainTitle {
     color: rgb(216 216 216);
 
-    font-family: 'Oxanium', serif;
+    font-family: 'RussoOne', serif;
 
     padding-left: 20px;
     padding-top: 2px;
