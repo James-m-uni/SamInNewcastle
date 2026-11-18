@@ -41,7 +41,7 @@
     <div class="bottomFlairMainPolygon"></div>
 </div>
 
-<div class="mainModal">
+<div class="mainModal" id="welcomeModal">
     <div class="modalContent">
         <div class="modalBody">
             <h3 class="modalWelcomeToTitle">Welcome to</h3>
@@ -49,16 +49,17 @@
             <p class="modalMainContextText">Enjoy the relaxing atmosphere and music with Sam, learn more about him or view my other projects!</p>
 
             <div class="modalButtonContainer">
-                <div class="modalPrimaryButton">Relax with Sam</div>
-                <div class="modalSecondaryButton">View my other projects</div>
+                <div class="modalPrimaryButton" id="relax">Relax with Sam</div>
+                <div class="modalSecondaryButton" id="viewOther">View my other projects</div>
             </div>
-
         </div>
+        <div class="modalCloseButton" id="close">(x)</div>
     </div>
 </div>
 
 
 <script src="js/title.js"></script>
+<script src="js/modal.js"></script>
 
 </body>
 </html>
