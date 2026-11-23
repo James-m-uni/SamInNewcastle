@@ -26,10 +26,5 @@ viewOther.addEventListener("click", function() {
 });
 
 relax.addEventListener("click", function() {
-    html2canvas(modalContent).then(function(canvas) {
-        document.body.appendChild(canvas);
-        const ctx = canvas.getContext("2d");
-        ctx.imageSmoothingEnabled = false;
-        /*put the canvas created elements before any other code so thye load in first*/
-    });
+
 });
