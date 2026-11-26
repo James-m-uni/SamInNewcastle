@@ -16,6 +16,12 @@
     align-items: center;
     z-index: 1000;
     background-color: rgba(0, 0, 0, 0.95);
+
+    transition: opacity 1s ease;
+}
+
+.mainModal.fadeOut {
+    opacity: 0;
 }
 
 .modalContent {

@@ -5,6 +5,8 @@ const close = welcomeModal.querySelector("#close");
 /*query selector is needed as getelementbyid belongs to parent document*/
 const modalContent = welcomeModal.querySelector(".modalContent");
 
+/*sound fx*/
+const samEngineStartSound = document.getElementById("samEngineStart");
 
 function quickHideModal() {
     welcomeModal.style.display = "none";
@@ -25,6 +27,8 @@ viewOther.addEventListener("click", function() {
     window.open("https://github.com/James-m-uni");
 });
 
-relax.addEventListener("click", function() {
-
+relax.addEventListener("click", function() {/*relax buttom*/
+    samEngineStartSound.currentTime = 0;
+    samEngineStartSound.play();
+    welcomeModal.classList.add("fadeOut");
 });
