@@ -1,15 +1,45 @@
+@font-face {
+    font-family: 'Seven Segment Font';
+    src: url('/fonts/noto-sans-symbols-2-symbols-400-normal.ttf');
+}
+
 .mainClockContainer {
     position:fixed;
     top:20px;
     right:20px;
 
-    height: 20vh;
+    height: 16vh;
     width: 50vh;
 
     display: flex;
 
-    background-color: red;
+    justify-content: center;
+
+    background: rgb(27 19 51);
 
     clip-path: polygon(0 0, calc(100% - 40px) 0, 100% 40px, 100% 100%, 40px 100%, 0 calc(100% - 40%));
 
+    opacity: 0.95;
+
+    border-radius: 15px;
+
+    border: 3px solid rgba(182, 115, 230, 0.7);
+
+    box-shadow: 0 0 15px rgba(182, 115, 230, 0.35);
+}
+
+.timeContainer{
+    position: relative;
+    width: 88%;
+    height: 55%;
+
+    top: 13%;
+
+    font-family: 'Seven Segment Font', serif;
+
+    font-size: clamp(20px, 3.9vw, 65px);
+
+    font-style: italic;
+
+    color: rgb(157, 215, 249);
 }

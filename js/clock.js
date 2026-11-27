@@ -57,7 +57,7 @@ function displayTime() {
         completedString += String.fromCodePoint(ssdTimeFont[longTime[i]]); /*only supports one font at this time maybe add more later?*/
     }
 
-    document.getElementById("time").textContent = completedString;
+    document.getElementById("timeContainer").textContent = completedString;
 }
 
 function changeTime() {
